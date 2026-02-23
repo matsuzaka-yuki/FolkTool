@@ -39,7 +39,7 @@ FolkTool 是一个专为 FolkPatch 和 APatch 设计的快速 Root 刷入工具�
 
 ### 📦 使用指导
 
-1. **下载安装：** 从 [发布页面](https://github.com/yourusername/FolkTool/releases/latest) 下载最新版 FolkTool-Setup.exe
+1. **下载安装：** 从 [发布页面](https://github.com/matsuzaka-yuki/FolkTool/releases/latest) 下载最新版 FolkTool-Setup.exe
 
 2. **安装程序：** 运行安装程序，按照向导完成安装
 

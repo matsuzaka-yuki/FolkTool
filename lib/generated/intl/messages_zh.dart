@@ -314,7 +314,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "quickPatch": MessageLookupByLibrary.simpleMessage("一键刷入"),
     "quickPatchComplete": MessageLookupByLibrary.simpleMessage("一键刷入完成！"),
     "quickPatchSubtitle": MessageLookupByLibrary.simpleMessage(
-      "自动完成修补、重启、刷入全流程",
+      "解放双手，全部自动",
     ),
     "rebootLater": MessageLookupByLibrary.simpleMessage("稍后重启"),
     "rebootNow": MessageLookupByLibrary.simpleMessage("立即重启"),

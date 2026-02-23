@@ -54,62 +54,66 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m16(error) => "Unpack failed: ${error}";
 
-  static String m17(path) => "Boot backup complete: ${path}";
+  static String m17(name) => "${name} installation failed";
 
-  static String m18(path) => "Backup successful: ${path}";
+  static String m18(name) => "${name} installed successfully";
 
-  static String m19(error) => "Failed to clean temporary files: ${error}";
+  static String m19(path) => "Boot backup complete: ${path}";
 
-  static String m20(path) => "Copied to ${path}";
+  static String m20(path) => "Backup successful: ${path}";
 
-  static String m21(cmd) => "Executing: ${cmd}";
+  static String m21(error) => "Failed to clean temporary files: ${error}";
 
-  static String m22(serial) => "Fastboot device detected: ${serial}";
+  static String m22(path) => "Copied to ${path}";
 
-  static String m23(path) => "File saved: ${path}";
+  static String m23(cmd) => "Executing: ${cmd}";
 
-  static String m24(path) => "Flashing: ${path}";
+  static String m24(serial) => "Fastboot device detected: ${serial}";
 
-  static String m25(path) => "Input file: ${path}";
+  static String m25(path) => "File saved: ${path}";
 
-  static String m26(path) => "Kpimg path: ${path}";
+  static String m26(path) => "Flashing: ${path}";
 
-  static String m27(module) => "KPM Module: ${module}";
+  static String m27(path) => "Input file: ${path}";
 
-  static String m28(path) => "Kptools path: ${path}";
+  static String m28(path) => "Kpimg path: ${path}";
 
-  static String m29(error) => "Failed to list patch info: ${error}";
+  static String m29(module) => "KPM Module: ${module}";
 
-  static String m30(error) => "Operation error: ${error}";
+  static String m30(path) => "Kptools path: ${path}";
 
-  static String m31(path) => "Output file: ${path}";
+  static String m31(error) => "Failed to list patch info: ${error}";
 
-  static String m32(path) => "Patch complete: ${path}";
+  static String m32(error) => "Operation error: ${error}";
 
-  static String m33(error) => "Patch exception: ${error}";
+  static String m33(path) => "Output file: ${path}";
 
-  static String m34(error) => "Patch failed: ${error}";
+  static String m34(path) => "Patch complete: ${path}";
 
-  static String m35(error) => "Repack exception: ${error}";
+  static String m35(error) => "Patch exception: ${error}";
 
-  static String m36(path, size) => "Repacked: ${path} (${size} MB)";
+  static String m36(error) => "Patch failed: ${error}";
 
-  static String m37(error) => "Unpack exception: ${error}";
+  static String m37(error) => "Repack exception: ${error}";
 
-  static String m38(path) => "Unpacked kernel: ${path}";
+  static String m38(path, size) => "Repacked: ${path} (${size} MB)";
 
-  static String m39(timeout) =>
+  static String m39(error) => "Unpack exception: ${error}";
+
+  static String m40(path) => "Unpacked kernel: ${path}";
+
+  static String m41(timeout) =>
       "Waiting for fastboot device (${timeout} seconds)";
 
-  static String m40(dir) => "Working directory: ${dir}";
+  static String m42(dir) => "Working directory: ${dir}";
 
-  static String m41(path) => "Logs saved: ${path}";
+  static String m43(path) => "Logs saved: ${path}";
 
-  static String m42(count) => "Selected (${count})";
+  static String m44(count) => "Selected (${count})";
 
-  static String m43(serial) => "Serial: ${serial}";
+  static String m45(serial) => "Serial: ${serial}";
 
-  static String m44(error) => "Unable to open link: ${error}";
+  static String m46(error) => "Unable to open link: ${error}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -123,6 +127,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "aboutTitle": MessageLookupByLibrary.simpleMessage("About"),
     "aboutTooltip": MessageLookupByLibrary.simpleMessage("About"),
     "adbConnected": MessageLookupByLibrary.simpleMessage("ADB Connected"),
+    "apatchDesc": MessageLookupByLibrary.simpleMessage(
+      "Android kernel-level root solution",
+    ),
     "appFullName": MessageLookupByLibrary.simpleMessage(
       "FolkTool - KernelPatch Auto Flash Tool",
     ),
@@ -142,6 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "clickToSelectFile": MessageLookupByLibrary.simpleMessage(
       "Click to select file...",
     ),
+    "clientCheck": MessageLookupByLibrary.simpleMessage("Client Detection"),
     "copyLogs": MessageLookupByLibrary.simpleMessage("Copy Logs"),
     "deviceConnectionTips": MessageLookupByLibrary.simpleMessage(
       "Device Connection Tips",
@@ -211,8 +219,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "flashFile": MessageLookupByLibrary.simpleMessage("Flash File"),
     "flashSuccess": MessageLookupByLibrary.simpleMessage("Flash successful!"),
     "flashing": MessageLookupByLibrary.simpleMessage("Flashing..."),
+    "folkpatchDesc": MessageLookupByLibrary.simpleMessage(
+      "An excellent KernelPatch management client",
+    ),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "install": MessageLookupByLibrary.simpleMessage("Install"),
+    "installFailed": m17,
+    "installSuccess": m18,
+    "installed": MessageLookupByLibrary.simpleMessage("Installed"),
+    "installing": MessageLookupByLibrary.simpleMessage("Installing..."),
     "kpmModules": MessageLookupByLibrary.simpleMessage(
       "KPM Modules (Optional)",
     ),
@@ -229,7 +245,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "logBackingUpPartition": MessageLookupByLibrary.simpleMessage(
       "Backing up partition...",
     ),
-    "logBackupComplete": m17,
+    "logBackupComplete": m19,
     "logBackupFailed": MessageLookupByLibrary.simpleMessage(
       "Boot backup failed",
     ),
@@ -239,7 +255,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "logBackupKernel": MessageLookupByLibrary.simpleMessage(
       "Backing up kernel...",
     ),
-    "logBackupSuccess": m18,
+    "logBackupSuccess": m20,
     "logCancelling": MessageLookupByLibrary.simpleMessage(
       "Cancelling operation...",
     ),
@@ -251,9 +267,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "logCleanWorkDir": MessageLookupByLibrary.simpleMessage(
       "Cleaning temporary files...",
     ),
-    "logCleanWorkDirFailed": m19,
+    "logCleanWorkDirFailed": m21,
     "logConsole": MessageLookupByLibrary.simpleMessage("Log Console"),
-    "logCopied": m20,
+    "logCopied": m22,
     "logCopyBoot": MessageLookupByLibrary.simpleMessage(
       "Copying boot image...",
     ),
@@ -270,9 +286,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Driver check passed",
     ),
     "logEntries": MessageLookupByLibrary.simpleMessage("entries"),
-    "logExecuteCmd": m21,
-    "logFastbootDetected": m22,
-    "logFileSaved": m23,
+    "logExecuteCmd": m23,
+    "logFastbootDetected": m24,
+    "logFileSaved": m25,
     "logFlashBootSuccess": MessageLookupByLibrary.simpleMessage(
       "Flash completed successfully",
     ),
@@ -281,24 +297,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "logFlashingBoot": MessageLookupByLibrary.simpleMessage(
       "Flashing boot image...",
     ),
-    "logFlashingBootPath": m24,
-    "logInputFile": m25,
-    "logKpimgPath": m26,
-    "logKpmModule": m27,
-    "logKptoolsPath": m28,
-    "logListPatchInfoFailed": m29,
+    "logFlashingBootPath": m26,
+    "logInputFile": m27,
+    "logKpimgPath": m28,
+    "logKpmModule": m29,
+    "logKptoolsPath": m30,
+    "logListPatchInfoFailed": m31,
     "logNoAdbDevice": MessageLookupByLibrary.simpleMessage(
       "No ADB device detected",
     ),
     "logOneClickComplete": MessageLookupByLibrary.simpleMessage(
       "One-click flash completed!",
     ),
-    "logOperationError": m30,
+    "logOperationError": m32,
     "logOutput": MessageLookupByLibrary.simpleMessage("Log Output"),
-    "logOutputFile": m31,
-    "logPatchComplete": m32,
-    "logPatchException": m33,
-    "logPatchFailed": m34,
+    "logOutputFile": m33,
+    "logPatchComplete": m34,
+    "logPatchException": m35,
+    "logPatchFailed": m36,
     "logPatchSuccess": MessageLookupByLibrary.simpleMessage(
       "Kernel patched successfully",
     ),
@@ -320,8 +336,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "logRebootingToFastboot": MessageLookupByLibrary.simpleMessage(
       "Rebooting to fastboot mode...",
     ),
-    "logRepackException": m35,
-    "logRepackSuccess": m36,
+    "logRepackException": m37,
+    "logRepackSuccess": m38,
     "logRepacking": MessageLookupByLibrary.simpleMessage(
       "Repacking boot image...",
     ),
@@ -331,17 +347,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "logStartPatching": MessageLookupByLibrary.simpleMessage(
       "Starting patch operation...",
     ),
-    "logUnpackException": m37,
-    "logUnpackSuccess": m38,
+    "logUnpackException": m39,
+    "logUnpackSuccess": m40,
     "logUnpacking": MessageLookupByLibrary.simpleMessage(
       "Unpacking boot image...",
     ),
-    "logWaitFastboot": m39,
+    "logWaitFastboot": m41,
     "logWaitFastbootTimeout": MessageLookupByLibrary.simpleMessage(
       "Wait for fastboot timeout",
     ),
-    "logWorkDir": m40,
-    "logsSaved": m41,
+    "logWorkDir": m42,
+    "logsSaved": m43,
     "manuallyEnterFastboot": MessageLookupByLibrary.simpleMessage(
       "Please manually enter Fastboot mode",
     ),
@@ -398,8 +414,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "Select KPM modules...",
     ),
     "selectMode": MessageLookupByLibrary.simpleMessage("Select Operation Mode"),
-    "selectedModules": m42,
-    "serial": m43,
+    "selectedModules": m44,
+    "serial": m45,
     "startFlash": MessageLookupByLibrary.simpleMessage("Start Flash"),
     "startPatch": MessageLookupByLibrary.simpleMessage("Start Patch"),
     "step1": MessageLookupByLibrary.simpleMessage("Step 1: Patch boot.img"),
@@ -440,7 +456,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "switchToEnglish": MessageLookupByLibrary.simpleMessage(
       "Switch to English",
     ),
-    "unableToOpenLink": m44,
+    "unableToOpenLink": m46,
     "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
   };
 }

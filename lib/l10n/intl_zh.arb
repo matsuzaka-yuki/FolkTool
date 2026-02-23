@@ -211,5 +211,14 @@
   "stepSaveFile": "保存文件",
   "stepRebootToFastboot": "重启到 Fastboot",
   "stepFlashDevice": "刷入设备",
-  "stepRebootComplete": "重启设备"
+  "stepRebootComplete": "重启设备",
+  
+  "clientCheck": "客户端检测",
+  "apatchDesc": "Android 内核级 Root 解决方案",
+  "folkpatchDesc": "一个优秀的KernelPatch管理客户端",
+  "installed": "已安装",
+  "install": "安装",
+  "installing": "安装中...",
+  "installSuccess": "{name} 安装成功",
+  "installFailed": "{name} 安装失败"
 }

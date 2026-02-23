@@ -211,5 +211,14 @@
   "stepSaveFile": "Save File",
   "stepRebootToFastboot": "Reboot to Fastboot",
   "stepFlashDevice": "Flash to Device",
-  "stepRebootComplete": "Reboot Device"
+  "stepRebootComplete": "Reboot Device",
+  
+  "clientCheck": "Client Detection",
+  "apatchDesc": "Android kernel-level root solution",
+  "folkpatchDesc": "An excellent KernelPatch management client",
+  "installed": "Installed",
+  "install": "Install",
+  "installing": "Installing...",
+  "installSuccess": "{name} installed successfully",
+  "installFailed": "{name} installation failed"
 }

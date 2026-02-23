@@ -47,27 +47,37 @@ class DeviceStatusCard extends StatelessWidget {
                     ),
                     const Spacer(),
                     if (showRefreshButton)
-                      TextButton.icon(
-                        onPressed: deviceProvider.isChecking
-                            ? null
-                            : () {
-                                if (onRefresh != null) {
-                                  onRefresh!();
-                                } else {
-                                  deviceProvider.refreshDevices();
-                                }
-                              },
-                        icon: deviceProvider.isChecking
-                            ? SizedBox(
-                                width: 16,
-                                height: 16,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  color: Theme.of(context).primaryColor,
+                      SizedBox(
+                        height: 32,
+                        child: deviceProvider.isManualChecking
+                            ? Center(
+                                child: SizedBox(
+                                  width: 16,
+                                  height: 16,
+                                  child: CircularProgressIndicator(
+                                    strokeWidth: 2,
+                                    color: Theme.of(context).primaryColor,
+                                  ),
                                 ),
                               )
-                            : const Icon(Icons.refresh, size: 18),
-                        label: Text(deviceProvider.isChecking ? l10n.checking : l10n.refresh),
+                            : TextButton.icon(
+                                onPressed: deviceProvider.isChecking
+                                    ? null
+                                    : () {
+                                        if (onRefresh != null) {
+                                          onRefresh!();
+                                        } else {
+                                          deviceProvider.manualRefreshDevices();
+                                        }
+                                      },
+                                icon: const Icon(Icons.refresh, size: 18),
+                                label: Text(l10n.refresh),
+                                style: TextButton.styleFrom(
+                                  minimumSize: Size.zero,
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                ),
+                              ),
                       ),
                   ],
                 ),

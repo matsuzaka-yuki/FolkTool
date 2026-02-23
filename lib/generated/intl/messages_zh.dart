@@ -54,61 +54,65 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m16(error) => "解包失败: ${error}";
 
-  static String m17(path) => "Boot 备份完成: ${path}";
+  static String m17(name) => "${name} 安装失败";
 
-  static String m18(path) => "备份成功: ${path}";
+  static String m18(name) => "${name} 安装成功";
 
-  static String m19(error) => "清理临时文件失败: ${error}";
+  static String m19(path) => "Boot 备份完成: ${path}";
 
-  static String m20(path) => "已复制到 ${path}";
+  static String m20(path) => "备份成功: ${path}";
 
-  static String m21(cmd) => "执行命令: ${cmd}";
+  static String m21(error) => "清理临时文件失败: ${error}";
 
-  static String m22(serial) => "检测到 Fastboot 设备: ${serial}";
+  static String m22(path) => "已复制到 ${path}";
 
-  static String m23(path) => "文件已保存: ${path}";
+  static String m23(cmd) => "执行命令: ${cmd}";
 
-  static String m24(path) => "正在刷入: ${path}";
+  static String m24(serial) => "检测到 Fastboot 设备: ${serial}";
 
-  static String m25(path) => "输入文件: ${path}";
+  static String m25(path) => "文件已保存: ${path}";
 
-  static String m26(path) => "Kpimg 路径: ${path}";
+  static String m26(path) => "正在刷入: ${path}";
 
-  static String m27(module) => "KPM 模块: ${module}";
+  static String m27(path) => "输入文件: ${path}";
 
-  static String m28(path) => "Kptools 路径: ${path}";
+  static String m28(path) => "Kpimg 路径: ${path}";
 
-  static String m29(error) => "获取补丁信息失败: ${error}";
+  static String m29(module) => "KPM 模块: ${module}";
 
-  static String m30(error) => "操作错误: ${error}";
+  static String m30(path) => "Kptools 路径: ${path}";
 
-  static String m31(path) => "输出文件: ${path}";
+  static String m31(error) => "获取补丁信息失败: ${error}";
 
-  static String m32(path) => "修补完成: ${path}";
+  static String m32(error) => "操作错误: ${error}";
 
-  static String m33(error) => "修补异常: ${error}";
+  static String m33(path) => "输出文件: ${path}";
 
-  static String m34(error) => "修补失败: ${error}";
+  static String m34(path) => "修补完成: ${path}";
 
-  static String m35(error) => "重新打包异常: ${error}";
+  static String m35(error) => "修补异常: ${error}";
 
-  static String m36(path, size) => "重新打包完成: ${path} (${size} MB)";
+  static String m36(error) => "修补失败: ${error}";
 
-  static String m37(error) => "解包异常: ${error}";
+  static String m37(error) => "重新打包异常: ${error}";
 
-  static String m38(path) => "已解包内核: ${path}";
+  static String m38(path, size) => "重新打包完成: ${path} (${size} MB)";
 
-  static String m39(timeout) => "等待 fastboot 设备 (${timeout} 秒)";
+  static String m39(error) => "解包异常: ${error}";
 
-  static String m40(dir) => "工作目录: ${dir}";
+  static String m40(path) => "已解包内核: ${path}";
 
-  static String m41(path) => "日志已保存: ${path}";
+  static String m41(timeout) => "等待 fastboot 设备 (${timeout} 秒)";
 
-  static String m42(count) => "已选择 (${count})";
+  static String m42(dir) => "工作目录: ${dir}";
 
-  static String m43(serial) => "序列号: ${serial}";
+  static String m43(path) => "日志已保存: ${path}";
 
-  static String m44(error) => "无法打开链接: ${error}";
+  static String m44(count) => "已选择 (${count})";
+
+  static String m45(serial) => "序列号: ${serial}";
+
+  static String m46(error) => "无法打开链接: ${error}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -122,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "aboutTitle": MessageLookupByLibrary.simpleMessage("关于"),
     "aboutTooltip": MessageLookupByLibrary.simpleMessage("关于"),
     "adbConnected": MessageLookupByLibrary.simpleMessage("ADB 已连接"),
+    "apatchDesc": MessageLookupByLibrary.simpleMessage("Android 内核级 Root 解决方案"),
     "appFullName": MessageLookupByLibrary.simpleMessage(
       "FolkTool - KernelPatch 自动刷入工具",
     ),
@@ -137,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "clearAllModules": MessageLookupByLibrary.simpleMessage("清空全部"),
     "clearLogs": MessageLookupByLibrary.simpleMessage("清除日志"),
     "clickToSelectFile": MessageLookupByLibrary.simpleMessage("点击选择文件..."),
+    "clientCheck": MessageLookupByLibrary.simpleMessage("客户端检测"),
     "copyLogs": MessageLookupByLibrary.simpleMessage("复制日志"),
     "deviceConnectionTips": MessageLookupByLibrary.simpleMessage("设备连接提示"),
     "deviceConnectionTipsDesc": MessageLookupByLibrary.simpleMessage(
@@ -190,8 +196,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "flashFile": MessageLookupByLibrary.simpleMessage("刷入文件"),
     "flashSuccess": MessageLookupByLibrary.simpleMessage("刷入成功！"),
     "flashing": MessageLookupByLibrary.simpleMessage("刷入中..."),
+    "folkpatchDesc": MessageLookupByLibrary.simpleMessage(
+      "一个优秀的KernelPatch管理客户端",
+    ),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "home": MessageLookupByLibrary.simpleMessage("首页"),
+    "install": MessageLookupByLibrary.simpleMessage("安装"),
+    "installFailed": m17,
+    "installSuccess": m18,
+    "installed": MessageLookupByLibrary.simpleMessage("已安装"),
+    "installing": MessageLookupByLibrary.simpleMessage("安装中..."),
     "kpmModules": MessageLookupByLibrary.simpleMessage("KPM 模块 (可选)"),
     "language": MessageLookupByLibrary.simpleMessage("语言"),
     "logAutoRebootFailed": MessageLookupByLibrary.simpleMessage(
@@ -200,13 +214,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "logAutoRebootFailed2": MessageLookupByLibrary.simpleMessage("自动重启失败"),
     "logBackingUpBoot": MessageLookupByLibrary.simpleMessage("正在备份 boot 分区..."),
     "logBackingUpPartition": MessageLookupByLibrary.simpleMessage("正在备份分区..."),
-    "logBackupComplete": m17,
+    "logBackupComplete": m19,
     "logBackupFailed": MessageLookupByLibrary.simpleMessage("Boot 备份失败"),
     "logBackupFailedTryAlt": MessageLookupByLibrary.simpleMessage(
       "备份失败，尝试备用方法...",
     ),
     "logBackupKernel": MessageLookupByLibrary.simpleMessage("正在备份内核..."),
-    "logBackupSuccess": m18,
+    "logBackupSuccess": m20,
     "logCancelling": MessageLookupByLibrary.simpleMessage("正在取消操作..."),
     "logCheckAdb": MessageLookupByLibrary.simpleMessage("正在检查 ADB..."),
     "logCheckFastboot": MessageLookupByLibrary.simpleMessage(
@@ -214,9 +228,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "logCheckingFile": MessageLookupByLibrary.simpleMessage("正在检查文件..."),
     "logCleanWorkDir": MessageLookupByLibrary.simpleMessage("正在清理临时文件..."),
-    "logCleanWorkDirFailed": m19,
+    "logCleanWorkDirFailed": m21,
     "logConsole": MessageLookupByLibrary.simpleMessage("日志控制台"),
-    "logCopied": m20,
+    "logCopied": m22,
     "logCopyBoot": MessageLookupByLibrary.simpleMessage("正在复制 boot 镜像..."),
     "logDeviceInFastboot": MessageLookupByLibrary.simpleMessage(
       "设备已进入 fastboot 模式",
@@ -227,27 +241,27 @@ class MessageLookup extends MessageLookupByLibrary {
     "logDeviceRebooting": MessageLookupByLibrary.simpleMessage("设备正在重启..."),
     "logDriverCheckPassed": MessageLookupByLibrary.simpleMessage("驱动检查通过"),
     "logEntries": MessageLookupByLibrary.simpleMessage("条记录"),
-    "logExecuteCmd": m21,
-    "logFastbootDetected": m22,
-    "logFileSaved": m23,
+    "logExecuteCmd": m23,
+    "logFastbootDetected": m24,
+    "logFileSaved": m25,
     "logFlashBootSuccess": MessageLookupByLibrary.simpleMessage("刷入完成"),
     "logFlashFailed": MessageLookupByLibrary.simpleMessage("刷入失败"),
     "logFlashSuccess": MessageLookupByLibrary.simpleMessage("刷入成功"),
     "logFlashingBoot": MessageLookupByLibrary.simpleMessage("正在刷入 boot 镜像..."),
-    "logFlashingBootPath": m24,
-    "logInputFile": m25,
-    "logKpimgPath": m26,
-    "logKpmModule": m27,
-    "logKptoolsPath": m28,
-    "logListPatchInfoFailed": m29,
+    "logFlashingBootPath": m26,
+    "logInputFile": m27,
+    "logKpimgPath": m28,
+    "logKpmModule": m29,
+    "logKptoolsPath": m30,
+    "logListPatchInfoFailed": m31,
     "logNoAdbDevice": MessageLookupByLibrary.simpleMessage("未检测到 ADB 设备"),
     "logOneClickComplete": MessageLookupByLibrary.simpleMessage("一键刷入完成！"),
-    "logOperationError": m30,
+    "logOperationError": m32,
     "logOutput": MessageLookupByLibrary.simpleMessage("日志输出"),
-    "logOutputFile": m31,
-    "logPatchComplete": m32,
-    "logPatchException": m33,
-    "logPatchFailed": m34,
+    "logOutputFile": m33,
+    "logPatchComplete": m34,
+    "logPatchException": m35,
+    "logPatchFailed": m36,
     "logPatchSuccess": MessageLookupByLibrary.simpleMessage("内核修补成功"),
     "logPatchingBoot": MessageLookupByLibrary.simpleMessage("正在修补 boot 镜像..."),
     "logPatchingKernel": MessageLookupByLibrary.simpleMessage("正在修补内核..."),
@@ -257,20 +271,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "logRebootingToFastboot": MessageLookupByLibrary.simpleMessage(
       "正在重启到 fastboot 模式...",
     ),
-    "logRepackException": m35,
-    "logRepackSuccess": m36,
+    "logRepackException": m37,
+    "logRepackSuccess": m38,
     "logRepacking": MessageLookupByLibrary.simpleMessage("正在重新打包 boot 镜像..."),
     "logSavingFile": MessageLookupByLibrary.simpleMessage("正在保存修补文件..."),
     "logStartPatching": MessageLookupByLibrary.simpleMessage("开始修补操作..."),
-    "logUnpackException": m37,
-    "logUnpackSuccess": m38,
+    "logUnpackException": m39,
+    "logUnpackSuccess": m40,
     "logUnpacking": MessageLookupByLibrary.simpleMessage("正在解包 boot 镜像..."),
-    "logWaitFastboot": m39,
+    "logWaitFastboot": m41,
     "logWaitFastbootTimeout": MessageLookupByLibrary.simpleMessage(
       "等待 fastboot 超时",
     ),
-    "logWorkDir": m40,
-    "logsSaved": m41,
+    "logWorkDir": m42,
+    "logsSaved": m43,
     "manuallyEnterFastboot": MessageLookupByLibrary.simpleMessage(
       "请手动将设备进入 Fastboot 模式",
     ),
@@ -315,8 +329,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectBootImage": MessageLookupByLibrary.simpleMessage("选择 boot.img 文件"),
     "selectKpmModules": MessageLookupByLibrary.simpleMessage("选择 KPM 模块..."),
     "selectMode": MessageLookupByLibrary.simpleMessage("选择操作模式"),
-    "selectedModules": m42,
-    "serial": m43,
+    "selectedModules": m44,
+    "serial": m45,
     "startFlash": MessageLookupByLibrary.simpleMessage("开始刷入"),
     "startPatch": MessageLookupByLibrary.simpleMessage("开始修补"),
     "step1": MessageLookupByLibrary.simpleMessage("步骤 1: 修补 boot.img"),
@@ -347,7 +361,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "switchToEnglish": MessageLookupByLibrary.simpleMessage(
       "Switch to English",
     ),
-    "unableToOpenLink": m44,
+    "unableToOpenLink": m46,
     "unknown": MessageLookupByLibrary.simpleMessage("未知"),
   };
 }

@@ -88,8 +88,10 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.all(20),
         child: Column(
            crossAxisAlignment: CrossAxisAlignment.start,
-           children: [
+          children: [
              const DeviceStatusCard(),
+             const SizedBox(height: 24),
+             const ClientCheckCard(),
              const SizedBox(height: 24),
              _buildModeSelection(context),
              const SizedBox(height: 24),

@@ -1733,6 +1733,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Client Detection`
+  String get clientCheck {
+    return Intl.message(
+      'Client Detection',
+      name: 'clientCheck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Android kernel-level root solution`
+  String get apatchDesc {
+    return Intl.message(
+      'Android kernel-level root solution',
+      name: 'apatchDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An excellent KernelPatch management client`
+  String get folkpatchDesc {
+    return Intl.message(
+      'An excellent KernelPatch management client',
+      name: 'folkpatchDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Installed`
+  String get installed {
+    return Intl.message('Installed', name: 'installed', desc: '', args: []);
+  }
+
+  /// `Install`
+  String get install {
+    return Intl.message('Install', name: 'install', desc: '', args: []);
+  }
+
+  /// `Installing...`
+  String get installing {
+    return Intl.message(
+      'Installing...',
+      name: 'installing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{name} installed successfully`
+  String installSuccess(Object name) {
+    return Intl.message(
+      '$name installed successfully',
+      name: 'installSuccess',
+      desc: '',
+      args: [name],
+    );
+  }
+
+  /// `{name} installation failed`
+  String installFailed(Object name) {
+    return Intl.message(
+      '$name installation failed',
+      name: 'installFailed',
+      desc: '',
+      args: [name],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

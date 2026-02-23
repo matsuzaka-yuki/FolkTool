@@ -313,4 +313,65 @@ class DeviceService {
     
     return result;
   }
+
+  /// 检测设备上是否安装了指定的应用
+  Future<bool> checkAppInstalled(String packageName, {LogCallback? onLog}) async {
+    try {
+      final result = await _runAdb(['shell', 'pm', 'list', 'packages'], onLog: onLog);
+      final output = result.stdout.toString();
+      final lines = output.split('\n');
+      
+      return lines.any((line) => line.trim() == 'package:$packageName');
+    } catch (e) {
+      onLog?.call('检查应用安装状态失败: $e');
+      return false;
+    }
+  }
+
+  /// 检测 APatch 是否已安装
+  Future<bool> checkAPatchInstalled({LogCallback? onLog}) async {
+    return checkAppInstalled(Constants.apatchPackageName, onLog: onLog);
+  }
+
+  /// 检测 FolkPatch 是否已安装
+  Future<bool> checkFolkPatchInstalled({LogCallback? onLog}) async {
+    return checkAppInstalled(Constants.folkpatchPackageName, onLog: onLog);
+  }
+
+  /// 通过 ADB 安装 APK
+  Future<bool> installApk(String apkPath, {LogCallback? onLog}) async {
+    try {
+      if (!await File(apkPath).exists()) {
+        onLog?.call('APK 文件不存在: $apkPath');
+        return false;
+      }
+      
+      onLog?.call('正在安装: $apkPath');
+      final result = await _runAdb(['install', '-r', apkPath], onLog: onLog);
+      
+      if (result.exitCode == 0) {
+        final output = result.stdout.toString().toLowerCase();
+        if (output.contains('success')) {
+          onLog?.call('安装成功');
+          return true;
+        }
+      }
+      
+      onLog?.call('安装失败: ${result.stderr}');
+      return false;
+    } catch (e) {
+      onLog?.call('安装异常: $e');
+      return false;
+    }
+  }
+
+  /// 安装 APatch
+  Future<bool> installAPatch({LogCallback? onLog}) async {
+    return installApk(Constants.apatchApkPath, onLog: onLog);
+  }
+
+  /// 安装 FolkPatch
+  Future<bool> installFolkPatch({LogCallback? onLog}) async {
+    return installApk(Constants.folkpatchApkPath, onLog: onLog);
+  }
 }

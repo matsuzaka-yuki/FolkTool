@@ -3,11 +3,25 @@ import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' as p;
 
 class Constants {
-  static String get appVersion => '1.0.0';
+  static String get appVersion => '1.2.0';
   static String get appName => 'FolkTool';
   static String get appFullName => 'FolkTool - KernelPatch 自动刷入工具';
   
   static String get _exeDir => File(Platform.resolvedExecutable).parent.path;
+  
+  static bool get _isReleaseMode {
+    final exeFile = File(Platform.resolvedExecutable);
+    final dataDir = Directory(p.join(exeFile.parent.path, 'data', 'flutter_assets', 'bin'));
+    return dataDir.existsSync();
+  }
+  
+  static String get _assetsRoot {
+    if (_isReleaseMode) {
+      final exeFile = File(Platform.resolvedExecutable);
+      return p.join(exeFile.parent.path, 'data', 'flutter_assets');
+    }
+    return _projectRoot;
+  }
   
   static String get _projectRoot {
     // 在开发环境中，使用当前工作目录
@@ -55,13 +69,13 @@ class Constants {
     return _exeDir;
   }
   
-  static String get kptoolsPath => p.join(_projectRoot, 'kptools', 'kptools.exe');
-  static String get adbPath => p.join(_projectRoot, 'bin', 'adb.exe');
-  static String get fastbootPath => p.join(_projectRoot, 'bin', 'fastboot.exe');
-  static String get kpimgPath => p.join(_projectRoot, 'assets', 'kpimg');
+  static String get kptoolsPath => p.join(_assetsRoot, 'kptools', 'kptools.exe');
+  static String get adbPath => p.join(_assetsRoot, 'bin', 'adb.exe');
+  static String get fastbootPath => p.join(_assetsRoot, 'bin', 'fastboot.exe');
+  static String get kpimgPath => p.join(_assetsRoot, 'assets', 'kpimg');
   
-  static String get apatchApkPath => p.join(_projectRoot, 'apk', 'APatch.apk');
-  static String get folkpatchApkPath => p.join(_projectRoot, 'apk', 'FolkPatch.apk');
+  static String get apatchApkPath => p.join(_assetsRoot, 'apk', 'APatch.apk');
+  static String get folkpatchApkPath => p.join(_assetsRoot, 'apk', 'FolkPatch.apk');
   
 static const String apatchPackageName = 'me.bmax.apatch';
 static const String folkpatchPackageName = 'me.yuki.folk';

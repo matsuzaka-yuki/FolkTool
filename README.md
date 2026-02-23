@@ -1,14 +1,8 @@
 # FolkTool
 
-<div align="center">
-
-![FolkTool](https://img.shields.io/badge/FolkTool-v1.0.0-blue)
 
 🌏 **README Language:** [**English**](README_EN.md) / [**中文**](README.md)
 
-FolkTool - FolkPatch 和 APatch 快速 Root 刷入工具
-
-</div>
 
 ---
 

@@ -1,5 +1,5 @@
 #define MyAppName "FolkTool"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.2.1"
 #define MyAppPublisher "FolkTool"
 #define MyAppExeName "FolkTool.exe"
 
@@ -34,7 +34,7 @@ Source: "build\windows\x64\runner\Release\url_launcher_windows_plugin.dll"; Dest
 Source: "build\windows\x64\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "bin\*"; DestDir: "{app}\bin"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "kptools\*"; DestDir: "{app}\kptools"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "assets\*"; DestDir: "{app}\assets"; Flags: ignoreversion recursesubdirs createallsubdirs exclude: "assets\icons"
+Source: "assets\*"; DestDir: "{app}\assets"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "assets\icons"
 
 [Dirs]
 Name: "{app}\installer"; Flags: deleteafterinstall

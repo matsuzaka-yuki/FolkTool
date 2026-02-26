@@ -15,7 +15,7 @@
   
   "selectMode": "选择操作模式",
   "quickPatch": "一键刷入",
-  "quickPatchSubtitle": "自动完成修补、重启、刷入全流程",
+  "quickPatchSubtitle": "你只需要负责等待",
   "stepPatch": "分步操作",
   "stepPatchSubtitle": "手动执行每个步骤，更灵活",
   
@@ -220,5 +220,14 @@
   "install": "安装",
   "installing": "安装中...",
   "installSuccess": "{name} 安装成功",
-  "installFailed": "{name} 安装失败"
+  "installFailed": "{name} 安装失败",
+
+  "simplePatch": "简单修补",
+  "simplePatchSubtitle": "单纯的修补文件",
+  "saveToFile": "保存到文件",
+  "saveAs": "另存为",
+  "selectSaveLocation": "选择保存位置",
+  "fileSavedSuccessfully": "文件已保存",
+  "patchOnlyComplete": "修补完成！",
+  "savePatchedFile": "保存修补文件"
 }

@@ -211,6 +211,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "fastbootConnected": MessageLookupByLibrary.simpleMessage(
       "Fastboot Connected",
     ),
+    "fileSavedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "File saved successfully",
+    ),
     "flashBoot": MessageLookupByLibrary.simpleMessage("Flash boot"),
     "flashComplete": MessageLookupByLibrary.simpleMessage("Flash Complete"),
     "flashCompleteDesc": MessageLookupByLibrary.simpleMessage(
@@ -382,6 +385,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationProgress": MessageLookupByLibrary.simpleMessage(
       "Operation Progress",
     ),
+    "patchOnlyComplete": MessageLookupByLibrary.simpleMessage(
+      "Patch complete!",
+    ),
     "patchedFile": MessageLookupByLibrary.simpleMessage("Patched File"),
     "patching": MessageLookupByLibrary.simpleMessage("Patching..."),
     "pleaseSelectFile": MessageLookupByLibrary.simpleMessage(
@@ -406,6 +412,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "reset": MessageLookupByLibrary.simpleMessage("Reset"),
     "restart": MessageLookupByLibrary.simpleMessage("Restart"),
     "retry": MessageLookupByLibrary.simpleMessage("Retry"),
+    "saveAs": MessageLookupByLibrary.simpleMessage("Save As"),
+    "savePatchedFile": MessageLookupByLibrary.simpleMessage(
+      "Save Patched File",
+    ),
+    "saveToFile": MessageLookupByLibrary.simpleMessage("Save to File"),
     "scanning": MessageLookupByLibrary.simpleMessage("Scanning devices..."),
     "selectBootImage": MessageLookupByLibrary.simpleMessage(
       "Select boot.img File",
@@ -414,8 +425,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Select KPM modules...",
     ),
     "selectMode": MessageLookupByLibrary.simpleMessage("Select Operation Mode"),
+    "selectSaveLocation": MessageLookupByLibrary.simpleMessage(
+      "Select save location",
+    ),
     "selectedModules": m44,
     "serial": m45,
+    "simplePatch": MessageLookupByLibrary.simpleMessage("Simple Patch"),
+    "simplePatchSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Patch boot.img only, save file manually",
+    ),
     "startFlash": MessageLookupByLibrary.simpleMessage("Start Flash"),
     "startPatch": MessageLookupByLibrary.simpleMessage("Start Patch"),
     "step1": MessageLookupByLibrary.simpleMessage("Step 1: Patch boot.img"),

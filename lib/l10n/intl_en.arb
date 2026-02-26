@@ -220,5 +220,14 @@
   "install": "Install",
   "installing": "Installing...",
   "installSuccess": "{name} installed successfully",
-  "installFailed": "{name} installation failed"
+  "installFailed": "{name} installation failed",
+
+  "simplePatch": "Simple Patch",
+  "simplePatchSubtitle": "Patch boot.img only, save file manually",
+  "saveToFile": "Save to File",
+  "saveAs": "Save As",
+  "selectSaveLocation": "Select save location",
+  "fileSavedSuccessfully": "File saved successfully",
+  "patchOnlyComplete": "Patch complete!",
+  "savePatchedFile": "Save Patched File"
 }

@@ -72,9 +72,25 @@ class FileService {
     final timestamp = DateTime.now().toString().replaceAll(':', '-').replaceAll('.', '-');
     final fileName = customName ?? 'boot_patched_$timestamp.img';
     final outputPath = p.join(outputDir, fileName);
-    
+
     await File(sourcePath).copy(outputPath);
     return outputPath;
+  }
+
+  Future<String?> savePatchedImageToLocation(String sourcePath) async {
+    final timestamp = DateTime.now().toString().replaceAll(':', '-').replaceAll('.', '-');
+    final result = await FilePicker.platform.saveFile(
+      dialogTitle: '选择保存位置',
+      fileName: 'boot_patched_$timestamp.img',
+      type: FileType.custom,
+      allowedExtensions: ['img'],
+    );
+
+    if (result != null) {
+      await File(sourcePath).copy(result);
+      return result;
+    }
+    return null;
   }
 
   Future<String> saveLogFile(String content) async {

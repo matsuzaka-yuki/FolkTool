@@ -1803,6 +1803,76 @@ class S {
       args: [name],
     );
   }
+
+  /// `Simple Patch`
+  String get simplePatch {
+    return Intl.message(
+      'Simple Patch',
+      name: 'simplePatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patch boot.img only, save file manually`
+  String get simplePatchSubtitle {
+    return Intl.message(
+      'Patch boot.img only, save file manually',
+      name: 'simplePatchSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save to File`
+  String get saveToFile {
+    return Intl.message('Save to File', name: 'saveToFile', desc: '', args: []);
+  }
+
+  /// `Save As`
+  String get saveAs {
+    return Intl.message('Save As', name: 'saveAs', desc: '', args: []);
+  }
+
+  /// `Select save location`
+  String get selectSaveLocation {
+    return Intl.message(
+      'Select save location',
+      name: 'selectSaveLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `File saved successfully`
+  String get fileSavedSuccessfully {
+    return Intl.message(
+      'File saved successfully',
+      name: 'fileSavedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patch complete!`
+  String get patchOnlyComplete {
+    return Intl.message(
+      'Patch complete!',
+      name: 'patchOnlyComplete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save Patched File`
+  String get savePatchedFile {
+    return Intl.message(
+      'Save Patched File',
+      name: 'savePatchedFile',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

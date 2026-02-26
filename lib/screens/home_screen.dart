@@ -7,6 +7,7 @@ import '../services/services.dart';
 import '../widgets/widgets.dart';
 import 'quick_patch_screen.dart';
 import 'step_patch_screen.dart';
+import 'simple_patch_screen.dart';
 import '../generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -55,6 +56,13 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const StepPatchScreen()),
+    );
+  }
+
+  void _navigateToSimplePatch() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const SimplePatchScreen()),
     );
   }
 
@@ -115,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildModeSelection(BuildContext context) {
     final l10n = S.of(context);
-    
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -149,6 +157,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: _navigateToStepPatch,
               ),
             ),
+          ],
+        ),
+        const SizedBox(height: 16),
+        Row(
+          children: [
+            Expanded(
+              child: _buildModeCard(
+                title: l10n.simplePatch,
+                subtitle: l10n.simplePatchSubtitle,
+                icon: Icons.build_circle,
+                color: Colors.orange,
+                onTap: _navigateToSimplePatch,
+              ),
+            ),
+            const SizedBox(width: 16),
+            const Expanded(child: SizedBox()),
           ],
         ),
       ],

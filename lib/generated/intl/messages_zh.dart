@@ -54,65 +54,67 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m16(error) => "解包失败: ${error}";
 
-  static String m17(name) => "${name} 安装失败";
+  static String m17(error) => "启动安装程序失败: ${error}";
 
-  static String m18(name) => "${name} 安装成功";
+  static String m18(name) => "${name} 安装失败";
 
-  static String m19(path) => "Boot 备份完成: ${path}";
+  static String m19(name) => "${name} 安装成功";
 
-  static String m20(path) => "备份成功: ${path}";
+  static String m20(path) => "Boot 备份完成: ${path}";
 
-  static String m21(error) => "清理临时文件失败: ${error}";
+  static String m21(path) => "备份成功: ${path}";
 
-  static String m22(path) => "已复制到 ${path}";
+  static String m22(error) => "清理临时文件失败: ${error}";
 
-  static String m23(cmd) => "执行命令: ${cmd}";
+  static String m23(path) => "已复制到 ${path}";
 
-  static String m24(serial) => "检测到 Fastboot 设备: ${serial}";
+  static String m24(cmd) => "执行命令: ${cmd}";
 
-  static String m25(path) => "文件已保存: ${path}";
+  static String m25(serial) => "检测到 Fastboot 设备: ${serial}";
 
-  static String m26(path) => "正在刷入: ${path}";
+  static String m26(path) => "文件已保存: ${path}";
 
-  static String m27(path) => "输入文件: ${path}";
+  static String m27(path) => "正在刷入: ${path}";
 
-  static String m28(path) => "Kpimg 路径: ${path}";
+  static String m28(path) => "输入文件: ${path}";
 
-  static String m29(module) => "KPM 模块: ${module}";
+  static String m29(path) => "Kpimg 路径: ${path}";
 
-  static String m30(path) => "Kptools 路径: ${path}";
+  static String m30(module) => "KPM 模块: ${module}";
 
-  static String m31(error) => "获取补丁信息失败: ${error}";
+  static String m31(path) => "Kptools 路径: ${path}";
 
-  static String m32(error) => "操作错误: ${error}";
+  static String m32(error) => "获取补丁信息失败: ${error}";
 
-  static String m33(path) => "输出文件: ${path}";
+  static String m33(error) => "操作错误: ${error}";
 
-  static String m34(path) => "修补完成: ${path}";
+  static String m34(path) => "输出文件: ${path}";
 
-  static String m35(error) => "修补异常: ${error}";
+  static String m35(path) => "修补完成: ${path}";
 
-  static String m36(error) => "修补失败: ${error}";
+  static String m36(error) => "修补异常: ${error}";
 
-  static String m37(error) => "重新打包异常: ${error}";
+  static String m37(error) => "修补失败: ${error}";
 
-  static String m38(path, size) => "重新打包完成: ${path} (${size} MB)";
+  static String m38(error) => "重新打包异常: ${error}";
 
-  static String m39(error) => "解包异常: ${error}";
+  static String m39(path, size) => "重新打包完成: ${path} (${size} MB)";
 
-  static String m40(path) => "已解包内核: ${path}";
+  static String m40(error) => "解包异常: ${error}";
 
-  static String m41(timeout) => "等待 fastboot 设备 (${timeout} 秒)";
+  static String m41(path) => "已解包内核: ${path}";
 
-  static String m42(dir) => "工作目录: ${dir}";
+  static String m42(timeout) => "等待 fastboot 设备 (${timeout} 秒)";
 
-  static String m43(path) => "日志已保存: ${path}";
+  static String m43(dir) => "工作目录: ${dir}";
 
-  static String m44(count) => "已选择 (${count})";
+  static String m44(path) => "日志已保存: ${path}";
 
-  static String m45(serial) => "序列号: ${serial}";
+  static String m45(count) => "已选择 (${count})";
 
-  static String m46(error) => "无法打开链接: ${error}";
+  static String m46(serial) => "序列号: ${serial}";
+
+  static String m47(error) => "无法打开链接: ${error}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -150,6 +152,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "deviceInFastboot": MessageLookupByLibrary.simpleMessage("设备已进入 Fastboot"),
     "deviceStatus": MessageLookupByLibrary.simpleMessage("设备状态"),
+    "driverInstall": MessageLookupByLibrary.simpleMessage("驱动安装"),
+    "driverInstallPage": MessageLookupByLibrary.simpleMessage("驱动安装"),
+    "driverInstallSubtitle": MessageLookupByLibrary.simpleMessage("安装设备驱动程序"),
     "enterSuperKey": MessageLookupByLibrary.simpleMessage("输入 SuperKey"),
     "errAdbNotAvailable": MessageLookupByLibrary.simpleMessage("ADB 不可用"),
     "errAdbNotExist": m1,
@@ -203,8 +208,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "home": MessageLookupByLibrary.simpleMessage("首页"),
     "install": MessageLookupByLibrary.simpleMessage("安装"),
-    "installFailed": m17,
-    "installSuccess": m18,
+    "installDriver": MessageLookupByLibrary.simpleMessage("安装驱动"),
+    "installDriverFailed": m17,
+    "installDriverSuccess": MessageLookupByLibrary.simpleMessage("驱动安装程序已启动"),
+    "installFailed": m18,
+    "installSuccess": m19,
     "installed": MessageLookupByLibrary.simpleMessage("已安装"),
     "installing": MessageLookupByLibrary.simpleMessage("安装中..."),
     "kpmModules": MessageLookupByLibrary.simpleMessage("KPM 模块 (可选)"),
@@ -215,13 +223,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "logAutoRebootFailed2": MessageLookupByLibrary.simpleMessage("自动重启失败"),
     "logBackingUpBoot": MessageLookupByLibrary.simpleMessage("正在备份 boot 分区..."),
     "logBackingUpPartition": MessageLookupByLibrary.simpleMessage("正在备份分区..."),
-    "logBackupComplete": m19,
+    "logBackupComplete": m20,
     "logBackupFailed": MessageLookupByLibrary.simpleMessage("Boot 备份失败"),
     "logBackupFailedTryAlt": MessageLookupByLibrary.simpleMessage(
       "备份失败，尝试备用方法...",
     ),
     "logBackupKernel": MessageLookupByLibrary.simpleMessage("正在备份内核..."),
-    "logBackupSuccess": m20,
+    "logBackupSuccess": m21,
     "logCancelling": MessageLookupByLibrary.simpleMessage("正在取消操作..."),
     "logCheckAdb": MessageLookupByLibrary.simpleMessage("正在检查 ADB..."),
     "logCheckFastboot": MessageLookupByLibrary.simpleMessage(
@@ -229,9 +237,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "logCheckingFile": MessageLookupByLibrary.simpleMessage("正在检查文件..."),
     "logCleanWorkDir": MessageLookupByLibrary.simpleMessage("正在清理临时文件..."),
-    "logCleanWorkDirFailed": m21,
+    "logCleanWorkDirFailed": m22,
     "logConsole": MessageLookupByLibrary.simpleMessage("日志控制台"),
-    "logCopied": m22,
+    "logCopied": m23,
     "logCopyBoot": MessageLookupByLibrary.simpleMessage("正在复制 boot 镜像..."),
     "logDeviceInFastboot": MessageLookupByLibrary.simpleMessage(
       "设备已进入 fastboot 模式",
@@ -242,27 +250,27 @@ class MessageLookup extends MessageLookupByLibrary {
     "logDeviceRebooting": MessageLookupByLibrary.simpleMessage("设备正在重启..."),
     "logDriverCheckPassed": MessageLookupByLibrary.simpleMessage("驱动检查通过"),
     "logEntries": MessageLookupByLibrary.simpleMessage("条记录"),
-    "logExecuteCmd": m23,
-    "logFastbootDetected": m24,
-    "logFileSaved": m25,
+    "logExecuteCmd": m24,
+    "logFastbootDetected": m25,
+    "logFileSaved": m26,
     "logFlashBootSuccess": MessageLookupByLibrary.simpleMessage("刷入完成"),
     "logFlashFailed": MessageLookupByLibrary.simpleMessage("刷入失败"),
     "logFlashSuccess": MessageLookupByLibrary.simpleMessage("刷入成功"),
     "logFlashingBoot": MessageLookupByLibrary.simpleMessage("正在刷入 boot 镜像..."),
-    "logFlashingBootPath": m26,
-    "logInputFile": m27,
-    "logKpimgPath": m28,
-    "logKpmModule": m29,
-    "logKptoolsPath": m30,
-    "logListPatchInfoFailed": m31,
+    "logFlashingBootPath": m27,
+    "logInputFile": m28,
+    "logKpimgPath": m29,
+    "logKpmModule": m30,
+    "logKptoolsPath": m31,
+    "logListPatchInfoFailed": m32,
     "logNoAdbDevice": MessageLookupByLibrary.simpleMessage("未检测到 ADB 设备"),
     "logOneClickComplete": MessageLookupByLibrary.simpleMessage("一键刷入完成！"),
-    "logOperationError": m32,
+    "logOperationError": m33,
     "logOutput": MessageLookupByLibrary.simpleMessage("日志输出"),
-    "logOutputFile": m33,
-    "logPatchComplete": m34,
-    "logPatchException": m35,
-    "logPatchFailed": m36,
+    "logOutputFile": m34,
+    "logPatchComplete": m35,
+    "logPatchException": m36,
+    "logPatchFailed": m37,
     "logPatchSuccess": MessageLookupByLibrary.simpleMessage("内核修补成功"),
     "logPatchingBoot": MessageLookupByLibrary.simpleMessage("正在修补 boot 镜像..."),
     "logPatchingKernel": MessageLookupByLibrary.simpleMessage("正在修补内核..."),
@@ -272,20 +280,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "logRebootingToFastboot": MessageLookupByLibrary.simpleMessage(
       "正在重启到 fastboot 模式...",
     ),
-    "logRepackException": m37,
-    "logRepackSuccess": m38,
+    "logRepackException": m38,
+    "logRepackSuccess": m39,
     "logRepacking": MessageLookupByLibrary.simpleMessage("正在重新打包 boot 镜像..."),
     "logSavingFile": MessageLookupByLibrary.simpleMessage("正在保存修补文件..."),
     "logStartPatching": MessageLookupByLibrary.simpleMessage("开始修补操作..."),
-    "logUnpackException": m39,
-    "logUnpackSuccess": m40,
+    "logUnpackException": m40,
+    "logUnpackSuccess": m41,
     "logUnpacking": MessageLookupByLibrary.simpleMessage("正在解包 boot 镜像..."),
-    "logWaitFastboot": m41,
+    "logWaitFastboot": m42,
     "logWaitFastbootTimeout": MessageLookupByLibrary.simpleMessage(
       "等待 fastboot 超时",
     ),
-    "logWorkDir": m42,
-    "logsSaved": m43,
+    "logWorkDir": m43,
+    "logsSaved": m44,
     "manuallyEnterFastboot": MessageLookupByLibrary.simpleMessage(
       "请手动将设备进入 Fastboot 模式",
     ),
@@ -293,6 +301,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "1. 关闭设备\n2. 同时按住 音量下键 + 电源键\n3. 连接 USB 线到电脑",
     ),
     "matsuzakaYuki": MessageLookupByLibrary.simpleMessage("Matsuzaka Yuki"),
+    "mediatekDriver": MessageLookupByLibrary.simpleMessage("联发科 USB 驱动"),
+    "mediatekDriverDesc": MessageLookupByLibrary.simpleMessage(
+      "适用于联发科芯片设备的 USB 驱动程序",
+    ),
     "nextStep": MessageLookupByLibrary.simpleMessage("下一步"),
     "noDeviceDetected": MessageLookupByLibrary.simpleMessage("未检测到设备"),
     "noDeviceDetectedDesc": MessageLookupByLibrary.simpleMessage(
@@ -313,6 +325,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "请先选择 boot.img 文件",
     ),
     "previousStep": MessageLookupByLibrary.simpleMessage("上一步"),
+    "qualcommDriver32": MessageLookupByLibrary.simpleMessage(
+      "高通 Fastboot 驱动 (32位)",
+    ),
+    "qualcommDriver32Desc": MessageLookupByLibrary.simpleMessage(
+      "适用于 32 位 Windows 系统的高通设备驱动",
+    ),
+    "qualcommDriver64": MessageLookupByLibrary.simpleMessage(
+      "高通 Fastboot 驱动 (64位)",
+    ),
+    "qualcommDriver64Desc": MessageLookupByLibrary.simpleMessage(
+      "适用于 64 位 Windows 系统的高通设备驱动",
+    ),
     "quickPatch": MessageLookupByLibrary.simpleMessage("一键刷入"),
     "quickPatchComplete": MessageLookupByLibrary.simpleMessage("一键刷入完成！"),
     "quickPatchSubtitle": MessageLookupByLibrary.simpleMessage("你只需要负责等待"),
@@ -333,8 +357,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectKpmModules": MessageLookupByLibrary.simpleMessage("选择 KPM 模块..."),
     "selectMode": MessageLookupByLibrary.simpleMessage("选择操作模式"),
     "selectSaveLocation": MessageLookupByLibrary.simpleMessage("选择保存位置"),
-    "selectedModules": m44,
-    "serial": m45,
+    "selectedModules": m45,
+    "serial": m46,
     "simplePatch": MessageLookupByLibrary.simpleMessage("简单修补"),
     "simplePatchSubtitle": MessageLookupByLibrary.simpleMessage("单纯的修补文件"),
     "startFlash": MessageLookupByLibrary.simpleMessage("开始刷入"),
@@ -367,7 +391,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "switchToEnglish": MessageLookupByLibrary.simpleMessage(
       "Switch to English",
     ),
-    "unableToOpenLink": m46,
+    "unableToOpenLink": m47,
     "unknown": MessageLookupByLibrary.simpleMessage("未知"),
   };
 }

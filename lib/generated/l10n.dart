@@ -1873,6 +1873,126 @@ class S {
       args: [],
     );
   }
+
+  /// `Driver Install`
+  String get driverInstall {
+    return Intl.message(
+      'Driver Install',
+      name: 'driverInstall',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Install the driver to resolve missing driver issues`
+  String get driverInstallSubtitle {
+    return Intl.message(
+      'Install the driver to resolve missing driver issues',
+      name: 'driverInstallSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Driver Installation`
+  String get driverInstallPage {
+    return Intl.message(
+      'Driver Installation',
+      name: 'driverInstallPage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Qualcomm Fastboot Driver (64-bit)`
+  String get qualcommDriver64 {
+    return Intl.message(
+      'Qualcomm Fastboot Driver (64-bit)',
+      name: 'qualcommDriver64',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Qualcomm device driver for 64-bit Windows systems`
+  String get qualcommDriver64Desc {
+    return Intl.message(
+      'Qualcomm device driver for 64-bit Windows systems',
+      name: 'qualcommDriver64Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Qualcomm Fastboot Driver (32-bit)`
+  String get qualcommDriver32 {
+    return Intl.message(
+      'Qualcomm Fastboot Driver (32-bit)',
+      name: 'qualcommDriver32',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Qualcomm device driver for 32-bit Windows systems`
+  String get qualcommDriver32Desc {
+    return Intl.message(
+      'Qualcomm device driver for 32-bit Windows systems',
+      name: 'qualcommDriver32Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `MediaTek USB Driver`
+  String get mediatekDriver {
+    return Intl.message(
+      'MediaTek USB Driver',
+      name: 'mediatekDriver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `USB driver for MediaTek chipset devices`
+  String get mediatekDriverDesc {
+    return Intl.message(
+      'USB driver for MediaTek chipset devices',
+      name: 'mediatekDriverDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Install Driver`
+  String get installDriver {
+    return Intl.message(
+      'Install Driver',
+      name: 'installDriver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Driver installer launched`
+  String get installDriverSuccess {
+    return Intl.message(
+      'Driver installer launched',
+      name: 'installDriverSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to launch installer: {error}`
+  String installDriverFailed(Object error) {
+    return Intl.message(
+      'Failed to launch installer: $error',
+      name: 'installDriverFailed',
+      desc: '',
+      args: [error],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

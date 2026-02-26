@@ -8,6 +8,7 @@ import '../widgets/widgets.dart';
 import 'quick_patch_screen.dart';
 import 'step_patch_screen.dart';
 import 'simple_patch_screen.dart';
+import 'driver_install_screen.dart';
 import '../generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -63,6 +64,13 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const SimplePatchScreen()),
+    );
+  }
+
+  void _navigateToDriverInstall() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const DriverInstallScreen()),
     );
   }
 
@@ -172,7 +180,15 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(width: 16),
-            const Expanded(child: SizedBox()),
+            Expanded(
+              child: _buildModeCard(
+                title: l10n.driverInstall,
+                subtitle: l10n.driverInstallSubtitle,
+                icon: Icons.usb,
+                color: Colors.purple,
+                onTap: _navigateToDriverInstall,
+              ),
+            ),
           ],
         ),
       ],

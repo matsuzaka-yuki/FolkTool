@@ -36,6 +36,7 @@ flutter:
     - bin/
     - kptools/
     - apk/
+    - drive/
 
 flutter_intl:
   enabled: true

@@ -17,7 +17,7 @@ class LogEntry {
   });
 
   String get levelText {
-    switch (level) {6
+    switch (level) {
       case LogLevel.info:
         return 'INFO';
       case LogLevel.success:

@@ -229,5 +229,22 @@
   "selectSaveLocation": "Select save location",
   "fileSavedSuccessfully": "File saved successfully",
   "patchOnlyComplete": "Patch complete!",
-  "savePatchedFile": "Save Patched File"
+  "savePatchedFile": "Save Patched File",
+
+  "driverInstall": "Driver Install",
+  "driverInstallSubtitle": "Install the driver to resolve missing driver issues",
+  "driverInstallPage": "Driver Installation",
+
+  "qualcommDriver64": "Qualcomm Fastboot Driver (64-bit)",
+  "qualcommDriver64Desc": "Qualcomm device driver for 64-bit Windows systems",
+
+  "qualcommDriver32": "Qualcomm Fastboot Driver (32-bit)",
+  "qualcommDriver32Desc": "Qualcomm device driver for 32-bit Windows systems",
+
+  "mediatekDriver": "MediaTek USB Driver",
+  "mediatekDriverDesc": "USB driver for MediaTek chipset devices",
+
+  "installDriver": "Install Driver",
+  "installDriverSuccess": "Driver installer launched",
+  "installDriverFailed": "Failed to launch installer: {error}"
 }

@@ -229,5 +229,22 @@
   "selectSaveLocation": "选择保存位置",
   "fileSavedSuccessfully": "文件已保存",
   "patchOnlyComplete": "修补完成！",
-  "savePatchedFile": "保存修补文件"
+  "savePatchedFile": "保存修补文件",
+
+  "driverInstall": "驱动安装",
+  "driverInstallSubtitle": "安装设备驱动程序",
+  "driverInstallPage": "驱动安装",
+
+  "qualcommDriver64": "高通 Fastboot 驱动 (64位)",
+  "qualcommDriver64Desc": "适用于 64 位 Windows 系统的高通设备驱动",
+
+  "qualcommDriver32": "高通 Fastboot 驱动 (32位)",
+  "qualcommDriver32Desc": "适用于 32 位 Windows 系统的高通设备驱动",
+
+  "mediatekDriver": "联发科 USB 驱动",
+  "mediatekDriverDesc": "适用于联发科芯片设备的 USB 驱动程序",
+
+  "installDriver": "安装驱动",
+  "installDriverSuccess": "驱动安装程序已启动",
+  "installDriverFailed": "启动安装程序失败: {error}"
 }

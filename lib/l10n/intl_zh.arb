@@ -244,6 +244,12 @@
   "mediatekDriver": "联发科 USB 驱动",
   "mediatekDriverDesc": "适用于联发科芯片设备的 USB 驱动程序",
 
+  "oneplusAdbDriver": "一加官方 ADB 驱动",
+  "oneplusAdbDriverDesc": "一加官方 ADB 驱动程序，适用于 Windows 7 系统",
+
+  "oppoAdbDriver": "OPPO 官方 ADB 驱动",
+  "oppoAdbDriverDesc": "OPPO 官方 USB 驱动程序，适用于 Windows 10 及以上系统",
+
   "installDriver": "安装驱动",
   "installDriverSuccess": "驱动安装程序已启动",
   "installDriverFailed": "启动安装程序失败: {error}"

@@ -244,6 +244,12 @@
   "mediatekDriver": "MediaTek USB Driver",
   "mediatekDriverDesc": "USB driver for MediaTek chipset devices",
 
+  "oneplusAdbDriver": "OnePlus Official ADB Driver",
+  "oneplusAdbDriverDesc": "Official OnePlus ADB driver for Windows 7 systems",
+
+  "oppoAdbDriver": "OPPO Official ADB Driver",
+  "oppoAdbDriverDesc": "Official OPPO USB driver for Windows 10 and above",
+
   "installDriver": "Install Driver",
   "installDriverSuccess": "Driver installer launched",
   "installDriverFailed": "Failed to launch installer: {error}"

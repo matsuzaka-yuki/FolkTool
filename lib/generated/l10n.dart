@@ -1964,6 +1964,46 @@ class S {
     );
   }
 
+  /// `OnePlus Official ADB Driver`
+  String get oneplusAdbDriver {
+    return Intl.message(
+      'OnePlus Official ADB Driver',
+      name: 'oneplusAdbDriver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Official OnePlus ADB driver for Windows 7 systems`
+  String get oneplusAdbDriverDesc {
+    return Intl.message(
+      'Official OnePlus ADB driver for Windows 7 systems',
+      name: 'oneplusAdbDriverDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OPPO Official ADB Driver`
+  String get oppoAdbDriver {
+    return Intl.message(
+      'OPPO Official ADB Driver',
+      name: 'oppoAdbDriver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Official OPPO USB driver for Windows 10 and above`
+  String get oppoAdbDriverDesc {
+    return Intl.message(
+      'Official OPPO USB driver for Windows 10 and above',
+      name: 'oppoAdbDriverDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Install Driver`
   String get installDriver {
     return Intl.message(

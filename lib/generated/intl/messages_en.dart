@@ -401,9 +401,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "noKpmModules": MessageLookupByLibrary.simpleMessage("No modules selected"),
     "noLogs": MessageLookupByLibrary.simpleMessage("No logs"),
     "oneClickFlash": MessageLookupByLibrary.simpleMessage("One-Click Flash"),
+    "oneplusAdbDriver": MessageLookupByLibrary.simpleMessage(
+      "OnePlus Official ADB Driver",
+    ),
+    "oneplusAdbDriverDesc": MessageLookupByLibrary.simpleMessage(
+      "Official OnePlus ADB driver for Windows 7 systems",
+    ),
     "operationFailed": MessageLookupByLibrary.simpleMessage("Operation Failed"),
     "operationProgress": MessageLookupByLibrary.simpleMessage(
       "Operation Progress",
+    ),
+    "oppoAdbDriver": MessageLookupByLibrary.simpleMessage(
+      "OPPO Official ADB Driver",
+    ),
+    "oppoAdbDriverDesc": MessageLookupByLibrary.simpleMessage(
+      "Official OPPO USB driver for Windows 10 and above",
     ),
     "patchOnlyComplete": MessageLookupByLibrary.simpleMessage(
       "Patch complete!",

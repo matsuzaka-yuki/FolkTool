@@ -316,8 +316,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "noKpmModules": MessageLookupByLibrary.simpleMessage("未选择模块"),
     "noLogs": MessageLookupByLibrary.simpleMessage("暂无日志"),
     "oneClickFlash": MessageLookupByLibrary.simpleMessage("一键刷入"),
+    "oneplusAdbDriver": MessageLookupByLibrary.simpleMessage("一加官方 ADB 驱动"),
+    "oneplusAdbDriverDesc": MessageLookupByLibrary.simpleMessage(
+      "一加官方 ADB 驱动程序，适用于 Windows 7 系统",
+    ),
     "operationFailed": MessageLookupByLibrary.simpleMessage("操作失败"),
     "operationProgress": MessageLookupByLibrary.simpleMessage("操作进度"),
+    "oppoAdbDriver": MessageLookupByLibrary.simpleMessage("OPPO 官方 ADB 驱动"),
+    "oppoAdbDriverDesc": MessageLookupByLibrary.simpleMessage(
+      "OPPO 官方 USB 驱动程序，适用于 Windows 10 及以上系统",
+    ),
     "patchOnlyComplete": MessageLookupByLibrary.simpleMessage("修补完成！"),
     "patchedFile": MessageLookupByLibrary.simpleMessage("修补文件"),
     "patching": MessageLookupByLibrary.simpleMessage("修补中..."),

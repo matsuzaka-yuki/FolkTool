@@ -37,6 +37,18 @@ class DriverService {
       executableName: 'MTK_USB_All_v1.0.8.exe',
       icon: 'developer_board',
     ),
+    DriverInfo(
+      name: 'oneplusAdbDriver',
+      description: 'oneplusAdbDriverDesc',
+      executableName: 'adb_driver.exe',
+      icon: 'phone_android',
+    ),
+    DriverInfo(
+      name: 'oppoAdbDriver',
+      description: 'oppoAdbDriverDesc',
+      executableName: 'Oppo+USB+Driver+Setup+V4.0.1.6.exe',
+      icon: 'smartphone',
+    ),
   ];
 
   Future<String> _getDriverPath(String executableName) async {

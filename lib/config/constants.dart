@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' as p;
 
 class Constants {
-  static String get appVersion => '1.2.1';
+  static String get appVersion => '1.3.0';
   static String get appName => 'FolkTool';
   static String get appFullName => 'FolkTool - KernelPatch 自动刷入工具';
   

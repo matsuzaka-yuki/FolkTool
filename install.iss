@@ -1,15 +1,15 @@
 [Setup]
 AppId={{A1B2C3D4-5E6F-7890-ABCD-EF1234567890}
 AppName=FolkTool
-AppVersion=1.2.1
-AppVerName=FolkTool 1.2.1
+AppVersion=1.3.0
+AppVerName=FolkTool 1.3.0
 AppPublisher=FolkTool
 DefaultDirName={autopf}\FolkTool
 DefaultGroupName=FolkTool
 AllowNoIcons=yes
 LicenseFile=
 OutputDir=release
-OutputBaseFilename=FolkTool-Setup-v1.2.1
+OutputBaseFilename=FolkTool-Setup-v1.3.0
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern

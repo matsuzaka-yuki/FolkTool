@@ -1,5 +1,5 @@
 #define MyAppName "FolkTool"
-#define MyAppVersion "1.2.1"
+#define MyAppVersion "1.3.0"
 #define MyAppPublisher "FolkTool"
 #define MyAppExeName "FolkTool.exe"
 

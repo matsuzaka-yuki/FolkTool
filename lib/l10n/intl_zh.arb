@@ -252,5 +252,20 @@
 
   "installDriver": "安装驱动",
   "installDriverSuccess": "驱动安装程序已启动",
-  "installDriverFailed": "启动安装程序失败: {error}"
+  "installDriverFailed": "启动安装程序失败: {error}",
+  
+  "kernelPatchVersion": "KernelPatch 版本",
+  "selectVersion": "选择版本",
+  "selectVersionDesc": "选择要使用的 KernelPatch 版本",
+  "customVersion": "自定义版本",
+  "selectCustomVersion": "选择自定义 kpimg 文件",
+  "currentVersion": "当前版本",
+  "noVersionSelected": "未选择版本",
+  "versionRecommended": "推荐",
+  "versionSupportUnpack": "内置解包",
+  "versionCustom": "自定义",
+  "invalidVersionFile": "无效的版本文件",
+  "customVersionSaved": "自定义版本已保存",
+  "loadingVersions": "加载版本中...",
+  "noVersionsAvailable": "没有可用的版本"
 }

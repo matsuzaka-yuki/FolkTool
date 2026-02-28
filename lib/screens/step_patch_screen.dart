@@ -26,6 +26,10 @@ class _StepPatchScreenState extends State<StepPatchScreen> {
   Future<void> _initData() async {
     final patchProvider = context.read<PatchProvider>();
     _superKeyController.text = patchProvider.superKey ?? '';
+    
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<VersionProvider>().loadVersions();
+    });
   }
 
   @override
@@ -169,6 +173,8 @@ class _StepPatchScreenState extends State<StepPatchScreen> {
       children: [
         _buildStepTitle(l10n.step1, l10n.step1Desc),
         const SizedBox(height: 20),
+        const VersionSelector(),
+        const SizedBox(height: 16),
         _buildFileSelector(patchProvider),
         const SizedBox(height: 16),
         _buildKpmModuleSelector(patchProvider),
@@ -180,7 +186,8 @@ class _StepPatchScreenState extends State<StepPatchScreen> {
               ? null
               : () async {
                   patchProvider.setSuperKey(_superKeyController.text);
-                  final success = await patchProvider.patchOnly();
+                  final versionProvider = context.read<VersionProvider>();
+                  final success = await patchProvider.patchOnly(versionProvider);
                   if (success && mounted) {
                     _nextStep();
                   }

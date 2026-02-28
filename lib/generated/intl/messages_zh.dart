@@ -146,6 +146,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "clickToSelectFile": MessageLookupByLibrary.simpleMessage("点击选择文件..."),
     "clientCheck": MessageLookupByLibrary.simpleMessage("客户端检测"),
     "copyLogs": MessageLookupByLibrary.simpleMessage("复制日志"),
+    "currentVersion": MessageLookupByLibrary.simpleMessage("当前版本"),
+    "customVersion": MessageLookupByLibrary.simpleMessage("自定义版本"),
+    "customVersionSaved": MessageLookupByLibrary.simpleMessage("自定义版本已保存"),
     "deviceConnectionTips": MessageLookupByLibrary.simpleMessage("设备连接提示"),
     "deviceConnectionTipsDesc": MessageLookupByLibrary.simpleMessage(
       "1. 确保设备已通过 USB 连接到电脑\n2. 在设备上开启开发者选项和 USB 调试\n3. 如需 Fastboot，请先进入 Bootloader 模式",
@@ -215,8 +218,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "installSuccess": m19,
     "installed": MessageLookupByLibrary.simpleMessage("已安装"),
     "installing": MessageLookupByLibrary.simpleMessage("安装中..."),
+    "invalidVersionFile": MessageLookupByLibrary.simpleMessage("无效的版本文件"),
+    "kernelPatchVersion": MessageLookupByLibrary.simpleMessage(
+      "KernelPatch 版本",
+    ),
     "kpmModules": MessageLookupByLibrary.simpleMessage("KPM 模块 (可选)"),
     "language": MessageLookupByLibrary.simpleMessage("语言"),
+    "loadingVersions": MessageLookupByLibrary.simpleMessage("加载版本中..."),
     "logAutoRebootFailed": MessageLookupByLibrary.simpleMessage(
       "自动重启到 fastboot 失败",
     ),
@@ -315,6 +323,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "noKpmModules": MessageLookupByLibrary.simpleMessage("未选择模块"),
     "noLogs": MessageLookupByLibrary.simpleMessage("暂无日志"),
+    "noVersionSelected": MessageLookupByLibrary.simpleMessage("未选择版本"),
+    "noVersionsAvailable": MessageLookupByLibrary.simpleMessage("没有可用的版本"),
     "oneClickFlash": MessageLookupByLibrary.simpleMessage("一键刷入"),
     "oneplusAdbDriver": MessageLookupByLibrary.simpleMessage("一加官方 ADB 驱动"),
     "oneplusAdbDriverDesc": MessageLookupByLibrary.simpleMessage(
@@ -362,9 +372,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "saveToFile": MessageLookupByLibrary.simpleMessage("保存到文件"),
     "scanning": MessageLookupByLibrary.simpleMessage("正在扫描设备连接"),
     "selectBootImage": MessageLookupByLibrary.simpleMessage("选择 boot.img 文件"),
+    "selectCustomVersion": MessageLookupByLibrary.simpleMessage(
+      "选择自定义 kpimg 文件",
+    ),
     "selectKpmModules": MessageLookupByLibrary.simpleMessage("选择 KPM 模块..."),
     "selectMode": MessageLookupByLibrary.simpleMessage("选择操作模式"),
     "selectSaveLocation": MessageLookupByLibrary.simpleMessage("选择保存位置"),
+    "selectVersion": MessageLookupByLibrary.simpleMessage("选择版本"),
+    "selectVersionDesc": MessageLookupByLibrary.simpleMessage(
+      "选择要使用的 KernelPatch 版本",
+    ),
     "selectedModules": m45,
     "serial": m46,
     "simplePatch": MessageLookupByLibrary.simpleMessage("简单修补"),
@@ -401,5 +418,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "unableToOpenLink": m47,
     "unknown": MessageLookupByLibrary.simpleMessage("未知"),
+    "versionCustom": MessageLookupByLibrary.simpleMessage("自定义"),
+    "versionRecommended": MessageLookupByLibrary.simpleMessage("推荐"),
+    "versionSupportUnpack": MessageLookupByLibrary.simpleMessage("内置解包"),
   };
 }

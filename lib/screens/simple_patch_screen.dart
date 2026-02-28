@@ -26,6 +26,10 @@ class _SimplePatchScreenState extends State<SimplePatchScreen> {
   Future<void> _initData() async {
     final patchProvider = context.read<PatchProvider>();
     _superKeyController.text = patchProvider.superKey ?? '';
+    
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<VersionProvider>().loadVersions();
+    });
   }
 
   @override
@@ -45,6 +49,7 @@ class _SimplePatchScreenState extends State<SimplePatchScreen> {
   void _startPatch() async {
     final l10n = S.of(context);
     final patchProvider = context.read<PatchProvider>();
+    final versionProvider = context.read<VersionProvider>();
 
     if (patchProvider.selectedFilePath == null) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -54,7 +59,7 @@ class _SimplePatchScreenState extends State<SimplePatchScreen> {
     }
 
     patchProvider.setSuperKey(_superKeyController.text);
-    await patchProvider.patchOnly();
+    await patchProvider.patchOnly(versionProvider);
   }
 
   Future<void> _savePatchedFile() async {
@@ -123,6 +128,8 @@ class _SimplePatchScreenState extends State<SimplePatchScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const VersionSelector(),
+                const SizedBox(height: 16),
                 _buildFileSelector(patchProvider),
                 const SizedBox(height: 16),
                 _buildKpmModuleSelector(patchProvider),

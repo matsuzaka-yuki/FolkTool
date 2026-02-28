@@ -2033,6 +2033,141 @@ class S {
       args: [error],
     );
   }
+
+  /// `KernelPatch Version`
+  String get kernelPatchVersion {
+    return Intl.message(
+      'KernelPatch Version',
+      name: 'kernelPatchVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Version`
+  String get selectVersion {
+    return Intl.message(
+      'Select Version',
+      name: 'selectVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select the KernelPatch version to use`
+  String get selectVersionDesc {
+    return Intl.message(
+      'Select the KernelPatch version to use',
+      name: 'selectVersionDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Custom Version`
+  String get customVersion {
+    return Intl.message(
+      'Custom Version',
+      name: 'customVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select custom kpimg file`
+  String get selectCustomVersion {
+    return Intl.message(
+      'Select custom kpimg file',
+      name: 'selectCustomVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current Version`
+  String get currentVersion {
+    return Intl.message(
+      'Current Version',
+      name: 'currentVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No version selected`
+  String get noVersionSelected {
+    return Intl.message(
+      'No version selected',
+      name: 'noVersionSelected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recommended`
+  String get versionRecommended {
+    return Intl.message(
+      'Recommended',
+      name: 'versionRecommended',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Built-in Unpack`
+  String get versionSupportUnpack {
+    return Intl.message(
+      'Built-in Unpack',
+      name: 'versionSupportUnpack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Custom`
+  String get versionCustom {
+    return Intl.message('Custom', name: 'versionCustom', desc: '', args: []);
+  }
+
+  /// `Invalid version file`
+  String get invalidVersionFile {
+    return Intl.message(
+      'Invalid version file',
+      name: 'invalidVersionFile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Custom version saved`
+  String get customVersionSaved {
+    return Intl.message(
+      'Custom version saved',
+      name: 'customVersionSaved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Loading versions...`
+  String get loadingVersions {
+    return Intl.message(
+      'Loading versions...',
+      name: 'loadingVersions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No versions available`
+  String get noVersionsAvailable {
+    return Intl.message(
+      'No versions available',
+      name: 'noVersionsAvailable',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

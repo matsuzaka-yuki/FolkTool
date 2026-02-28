@@ -1,15 +1,15 @@
 [Setup]
 AppId={{A1B2C3D4-5E6F-7890-ABCD-EF1234567890}
 AppName=FolkTool
-AppVersion=1.3.0
-AppVerName=FolkTool 1.3.0
+AppVersion=1.5.0
+AppVerName=FolkTool 1.5.0
 AppPublisher=FolkTool
 DefaultDirName={autopf}\FolkTool
 DefaultGroupName=FolkTool
 AllowNoIcons=yes
 LicenseFile=
 OutputDir=release
-OutputBaseFilename=FolkTool-Setup-v1.3.0
+OutputBaseFilename=FolkTool-Setup-v1.5.0
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -26,6 +26,7 @@ Source: "release\FolkTool-Windows-Release\FolkTool.exe"; DestDir: "{app}"; Flags
 Source: "release\FolkTool-Windows-Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "release\FolkTool-Windows-Release\url_launcher_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "release\FolkTool-Windows-Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "kp_versions\*"; DestDir: "{app}\kp_versions"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{group}\FolkTool"; Filename: "{app}\FolkTool.exe"

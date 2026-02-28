@@ -1,0 +1,3 @@
+版本: 0.13.0
+kpimg路径: kp_versions/0.13.0/kpimg-android
+工作目录: $(pwd)

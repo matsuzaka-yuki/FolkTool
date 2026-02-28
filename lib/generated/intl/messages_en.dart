@@ -153,6 +153,11 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "clientCheck": MessageLookupByLibrary.simpleMessage("Client Detection"),
     "copyLogs": MessageLookupByLibrary.simpleMessage("Copy Logs"),
+    "currentVersion": MessageLookupByLibrary.simpleMessage("Current Version"),
+    "customVersion": MessageLookupByLibrary.simpleMessage("Custom Version"),
+    "customVersionSaved": MessageLookupByLibrary.simpleMessage(
+      "Custom version saved",
+    ),
     "deviceConnectionTips": MessageLookupByLibrary.simpleMessage(
       "Device Connection Tips",
     ),
@@ -246,10 +251,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "installSuccess": m19,
     "installed": MessageLookupByLibrary.simpleMessage("Installed"),
     "installing": MessageLookupByLibrary.simpleMessage("Installing..."),
+    "invalidVersionFile": MessageLookupByLibrary.simpleMessage(
+      "Invalid version file",
+    ),
+    "kernelPatchVersion": MessageLookupByLibrary.simpleMessage(
+      "KernelPatch Version",
+    ),
     "kpmModules": MessageLookupByLibrary.simpleMessage(
       "KPM Modules (Optional)",
     ),
     "language": MessageLookupByLibrary.simpleMessage("Language"),
+    "loadingVersions": MessageLookupByLibrary.simpleMessage(
+      "Loading versions...",
+    ),
     "logAutoRebootFailed": MessageLookupByLibrary.simpleMessage(
       "Auto reboot to fastboot failed",
     ),
@@ -400,6 +414,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "noKpmModules": MessageLookupByLibrary.simpleMessage("No modules selected"),
     "noLogs": MessageLookupByLibrary.simpleMessage("No logs"),
+    "noVersionSelected": MessageLookupByLibrary.simpleMessage(
+      "No version selected",
+    ),
+    "noVersionsAvailable": MessageLookupByLibrary.simpleMessage(
+      "No versions available",
+    ),
     "oneClickFlash": MessageLookupByLibrary.simpleMessage("One-Click Flash"),
     "oneplusAdbDriver": MessageLookupByLibrary.simpleMessage(
       "OnePlus Official ADB Driver",
@@ -465,12 +485,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectBootImage": MessageLookupByLibrary.simpleMessage(
       "Select boot.img File",
     ),
+    "selectCustomVersion": MessageLookupByLibrary.simpleMessage(
+      "Select custom kpimg file",
+    ),
     "selectKpmModules": MessageLookupByLibrary.simpleMessage(
       "Select KPM modules...",
     ),
     "selectMode": MessageLookupByLibrary.simpleMessage("Select Operation Mode"),
     "selectSaveLocation": MessageLookupByLibrary.simpleMessage(
       "Select save location",
+    ),
+    "selectVersion": MessageLookupByLibrary.simpleMessage("Select Version"),
+    "selectVersionDesc": MessageLookupByLibrary.simpleMessage(
+      "Select the KernelPatch version to use",
     ),
     "selectedModules": m45,
     "serial": m46,
@@ -520,5 +547,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "unableToOpenLink": m47,
     "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
+    "versionCustom": MessageLookupByLibrary.simpleMessage("Custom"),
+    "versionRecommended": MessageLookupByLibrary.simpleMessage("Recommended"),
+    "versionSupportUnpack": MessageLookupByLibrary.simpleMessage(
+      "Built-in Unpack",
+    ),
   };
 }

@@ -26,6 +26,10 @@ class _QuickPatchScreenState extends State<QuickPatchScreen> {
   Future<void> _initData() async {
     final patchProvider = context.read<PatchProvider>();
     _superKeyController.text = patchProvider.superKey ?? '';
+    
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<VersionProvider>().loadVersions();
+    });
   }
 
   @override
@@ -46,6 +50,7 @@ class _QuickPatchScreenState extends State<QuickPatchScreen> {
     final l10n = S.of(context);
     final patchProvider = context.read<PatchProvider>();
     final deviceProvider = context.read<DeviceProvider>();
+    final versionProvider = context.read<VersionProvider>();
     
     if (patchProvider.selectedFilePath == null) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -60,7 +65,7 @@ class _QuickPatchScreenState extends State<QuickPatchScreen> {
       _isStarting = true;
     });
     
-    await patchProvider.startQuickPatch(deviceProvider);
+    await patchProvider.startQuickPatch(deviceProvider, versionProvider);
     
     setState(() {
       _isStarting = false;
@@ -108,6 +113,8 @@ class _QuickPatchScreenState extends State<QuickPatchScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const VersionSelector(),
+                  const SizedBox(height: 16),
                   _buildFileSelector(patchProvider),
                   const SizedBox(height: 16),
                   _buildKpmModuleSelector(patchProvider),

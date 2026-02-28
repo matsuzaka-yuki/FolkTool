@@ -3,6 +3,7 @@ import 'package:process_run/process_run.dart';
 import 'package:path/path.dart' as p;
 import '../config/constants.dart';
 import '../models/patch_result.dart';
+import '../models/kp_version.dart';
 import '../generated/l10n.dart';
 
 typedef LogCallback = void Function(String line);
@@ -13,12 +14,13 @@ class KpToolsService {
     required String outputPath,
     String? superKey,
     List<String> kpmModules = const [],
+    KpVersion? kpVersion,
     LogCallback? onLog,
   }) async {
     final logs = <String>[];
     
     try {
-      final kpimgPath = _getKpimgPath();
+      final kpimgPath = kpVersion?.kpimgPath ?? _getKpimgPath();
       
       onLog?.call(S.current.logCheckingFile);
       onLog?.call(S.current.logInputFile(inputPath));
@@ -239,7 +241,7 @@ class KpToolsService {
   String _getKpimgPath() {
     return Constants.kpimgPath;
   }
-
+  
   Future<ProcessResult> _runKptools(
     List<String> args, {
     String? workDir,

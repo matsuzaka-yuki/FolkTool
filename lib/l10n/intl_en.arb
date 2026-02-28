@@ -252,5 +252,20 @@
 
   "installDriver": "Install Driver",
   "installDriverSuccess": "Driver installer launched",
-  "installDriverFailed": "Failed to launch installer: {error}"
+  "installDriverFailed": "Failed to launch installer: {error}",
+  
+  "kernelPatchVersion": "KernelPatch Version",
+  "selectVersion": "Select Version",
+  "selectVersionDesc": "Select the KernelPatch version to use",
+  "customVersion": "Custom Version",
+  "selectCustomVersion": "Select custom kpimg file",
+  "currentVersion": "Current Version",
+  "noVersionSelected": "No version selected",
+  "versionRecommended": "Recommended",
+  "versionSupportUnpack": "Built-in Unpack",
+  "versionCustom": "Custom",
+  "invalidVersionFile": "Invalid version file",
+  "customVersionSaved": "Custom version saved",
+  "loadingVersions": "Loading versions...",
+  "noVersionsAvailable": "No versions available"
 }

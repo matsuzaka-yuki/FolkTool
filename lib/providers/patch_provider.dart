@@ -7,6 +7,7 @@ import '../models/models.dart';
 import '../services/services.dart';
 import '../generated/l10n.dart';
 import 'device_provider.dart';
+import 'version_provider.dart';
 
 enum PatchOperationState {
   idle,
@@ -137,7 +138,10 @@ class PatchProvider extends ChangeNotifier {
     }
   }
 
-  Future<void> startQuickPatch(DeviceProvider deviceProvider) async {
+  Future<void> startQuickPatch(
+    DeviceProvider deviceProvider,
+    VersionProvider versionProvider,
+  ) async {
     if (_selectedFilePath == null) {
       _errorMessage = S.current.errSelectBootFirst;
       notifyListeners();
@@ -207,6 +211,7 @@ class PatchProvider extends ChangeNotifier {
         outputPath: _patchedFilePath!,
         superKey: _superKey,
         kpmModules: _selectedKpmModules.toList(),
+        kpVersion: versionProvider.selectedVersion,
         onLog: (line) => _addLog(LogLevel.info, line),
       );
       
@@ -344,7 +349,7 @@ class PatchProvider extends ChangeNotifier {
     }
   }
 
-  Future<bool> patchOnly() async {
+  Future<bool> patchOnly(VersionProvider versionProvider) async {
     if (_selectedFilePath == null) {
       _errorMessage = S.current.errSelectBootFirst;
       notifyListeners();
@@ -368,6 +373,7 @@ class PatchProvider extends ChangeNotifier {
         outputPath: _patchedFilePath!,
         superKey: _superKey,
         kpmModules: _selectedKpmModules.toList(),
+        kpVersion: versionProvider.selectedVersion,
         onLog: (line) => _addLog(LogLevel.info, line),
       );
       

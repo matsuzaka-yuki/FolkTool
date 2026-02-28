@@ -13,36 +13,28 @@ class Constants {
     final exeFile = File(Platform.resolvedExecutable);
     final exePath = exeFile.parent.path.toLowerCase();
 
-    // Debug 模式下，exe 在 build/windows/x64/runner/Debug/ 目录下
-    // Release 模式下，exe 在安装目录或单独的 Release 目录下
     if (exePath.contains(r'\debug') || exePath.contains('/debug')) {
       return false;
     }
 
-    // 检查是否在 build 目录下（开发模式）
     if (exePath.contains(r'\build\') || exePath.contains('/build/')) {
       return false;
     }
 
-    // 检查是否有 data/flutter_assets/bin 目录（但不能作为唯一判断条件）
-    final dataDir = Directory(p.join(exeFile.parent.path, 'data', 'flutter_assets', 'bin'));
-    if (!dataDir.existsSync()) {
-      return false;
-    }
-
-    // 如果在安装目录（包含 FolkTool-Windows-Release 或 folktool_app），则为 release 模式
-    if (exePath.contains('folktool') && (exePath.contains('release') || exePath.contains('install'))) {
+    final binDir = Directory(p.join(exeFile.parent.path, 'bin'));
+    final kptoolsDir = Directory(p.join(exeFile.parent.path, 'kptools'));
+    final kpVersionsDir = Directory(p.join(exeFile.parent.path, 'kp_versions'));
+    
+    if (binDir.existsSync() && kptoolsDir.existsSync() && kpVersionsDir.existsSync()) {
       return true;
     }
 
-    // 默认为开发模式
     return false;
   }
   
   static String get _assetsRoot {
     if (_isReleaseMode) {
-      final exeFile = File(Platform.resolvedExecutable);
-      return p.join(exeFile.parent.path, 'data', 'flutter_assets');
+      return File(Platform.resolvedExecutable).parent.path;
     }
     return _projectRoot;
   }

@@ -118,9 +118,11 @@ class Constants {
   
   static String get apatchApkPath => p.join(_assetsRoot, 'apk', 'APatch.apk');
   static String get folkpatchApkPath => p.join(_assetsRoot, 'apk', 'FolkPatch.apk');
+  static String get folkliteApkPath => p.join(_assetsRoot, 'apk', 'FolkLite.apk');
   
 static const String apatchPackageName = 'me.bmax.apatch';
 static const String folkpatchPackageName = 'me.yuki.folk';
+static const String folklitePackageName = 'mi.yuki.folk';
   
   static String get outputDirName => 'FolkTool/patched';
   static String get logsDirName => 'FolkTool/logs';

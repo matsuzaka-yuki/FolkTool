@@ -216,6 +216,7 @@
   "clientCheck": "Client Detection",
   "apatchDesc": "Android kernel-level root solution",
   "folkpatchDesc": "An excellent KernelPatch management client",
+  "folkliteDesc": "A lightweight KernelPatch management client",
   "installed": "Installed",
   "install": "Install",
   "installing": "Installing...",

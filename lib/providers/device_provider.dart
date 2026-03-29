@@ -15,6 +15,7 @@ enum DeviceConnectionState {
 enum ClientType {
   apatch,
   folkpatch,
+  folklite,
 }
 
 /// 客户端安装状态
@@ -57,6 +58,7 @@ class DeviceProvider extends ChangeNotifier {
   // 客户端安装状态
   ClientInstallStatus _apatchStatus = ClientInstallStatus(type: ClientType.apatch, installed: false);
   ClientInstallStatus _folkpatchStatus = ClientInstallStatus(type: ClientType.folkpatch, installed: false);
+  ClientInstallStatus _folkliteStatus = ClientInstallStatus(type: ClientType.folklite, installed: false);
   bool _isCheckingClients = false;
   bool _isManualCheckingClients = false;
   
@@ -73,9 +75,10 @@ class DeviceProvider extends ChangeNotifier {
   // 客户端状态 Getters
   ClientInstallStatus get apatchStatus => _apatchStatus;
   ClientInstallStatus get folkpatchStatus => _folkpatchStatus;
+  ClientInstallStatus get folkliteStatus => _folkliteStatus;
   bool get isCheckingClients => _isCheckingClients;
   bool get isManualCheckingClients => _isManualCheckingClients;
-  bool get hasAnyClientInstalled => _apatchStatus.installed || _folkpatchStatus.installed;
+  bool get hasAnyClientInstalled => _apatchStatus.installed || _folkpatchStatus.installed || _folkliteStatus.installed;
 
   Future<void> checkDriver() async {
     debugPrint('[DriverCheck] ADB Path: ${Constants.adbPath}');
@@ -248,11 +251,15 @@ class DeviceProvider extends ChangeNotifier {
       final folkpatchInstalled = await _deviceService.checkFolkPatchInstalled(
         onLog: (line) => debugPrint('[ClientCheck] $line'),
       );
+      final folkliteInstalled = await _deviceService.checkFolkLiteInstalled(
+        onLog: (line) => debugPrint('[ClientCheck] $line'),
+      );
       
       _apatchStatus = ClientInstallStatus(type: ClientType.apatch, installed: apatchInstalled);
       _folkpatchStatus = ClientInstallStatus(type: ClientType.folkpatch, installed: folkpatchInstalled);
+      _folkliteStatus = ClientInstallStatus(type: ClientType.folklite, installed: folkliteInstalled);
       
-      debugPrint('[ClientCheck] APatch: $apatchInstalled, FolkPatch: $folkpatchInstalled');
+      debugPrint('[ClientCheck] APatch: $apatchInstalled, FolkPatch: $folkpatchInstalled, FolkLite: $folkliteInstalled');
     } catch (e) {
       debugPrint('[ClientCheck] Error: $e');
     }
@@ -276,11 +283,15 @@ class DeviceProvider extends ChangeNotifier {
       final folkpatchInstalled = await _deviceService.checkFolkPatchInstalled(
         onLog: (line) => debugPrint('[ClientCheck] $line'),
       );
+      final folkliteInstalled = await _deviceService.checkFolkLiteInstalled(
+        onLog: (line) => debugPrint('[ClientCheck] $line'),
+      );
       
       _apatchStatus = ClientInstallStatus(type: ClientType.apatch, installed: apatchInstalled);
       _folkpatchStatus = ClientInstallStatus(type: ClientType.folkpatch, installed: folkpatchInstalled);
+      _folkliteStatus = ClientInstallStatus(type: ClientType.folklite, installed: folkliteInstalled);
       
-      debugPrint('[ClientCheck] APatch: $apatchInstalled, FolkPatch: $folkpatchInstalled');
+      debugPrint('[ClientCheck] APatch: $apatchInstalled, FolkPatch: $folkpatchInstalled, FolkLite: $folkliteInstalled');
     } catch (e) {
       debugPrint('[ClientCheck] Error: $e');
     }
@@ -300,8 +311,10 @@ class DeviceProvider extends ChangeNotifier {
     // 设置安装中状态
     if (type == ClientType.apatch) {
       _apatchStatus = _apatchStatus.copyWith(installing: true);
-    } else {
+    } else if (type == ClientType.folkpatch) {
       _folkpatchStatus = _folkpatchStatus.copyWith(installing: true);
+    } else {
+      _folkliteStatus = _folkliteStatus.copyWith(installing: true);
     }
     notifyListeners();
     
@@ -313,10 +326,17 @@ class DeviceProvider extends ChangeNotifier {
         installed: success,
         installing: false,
       );
-    } else {
+    } else if (type == ClientType.folkpatch) {
       success = await _deviceService.installFolkPatch(onLog: onLog);
       _folkpatchStatus = ClientInstallStatus(
         type: ClientType.folkpatch,
+        installed: success,
+        installing: false,
+      );
+    } else {
+      success = await _deviceService.installFolkLite(onLog: onLog);
+      _folkliteStatus = ClientInstallStatus(
+        type: ClientType.folklite,
         installed: success,
         installing: false,
       );

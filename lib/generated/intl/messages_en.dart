@@ -239,6 +239,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "folkpatchDesc": MessageLookupByLibrary.simpleMessage(
       "An excellent KernelPatch management client",
     ),
+    "folkliteDesc": MessageLookupByLibrary.simpleMessage(
+      "A lightweight KernelPatch management client",
+    ),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
     "install": MessageLookupByLibrary.simpleMessage("Install"),

@@ -1764,6 +1764,16 @@ class S {
     );
   }
 
+  /// `A lightweight KernelPatch management client`
+  String get folkliteDesc {
+    return Intl.message(
+      'A lightweight KernelPatch management client',
+      name: 'folkliteDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Installed`
   String get installed {
     return Intl.message('Installed', name: 'installed', desc: '', args: []);
